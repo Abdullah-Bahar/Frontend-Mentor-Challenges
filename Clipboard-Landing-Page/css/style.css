@@ -1,0 +1,344 @@
+/* =========== Variables =========== */
+:root {
+	/* Font Familiy */
+	--font-primary: "Bai Jamjuree", sans-serif;
+	--font-regular: 400;
+	--font-bold: 600;
+	--lh-base: 1.5;
+
+	/* Font Size */
+	--fs-h1: 3.6rem;
+	--fs-h2: 3rem;
+	--fs-h3: 2.6rem;
+	--fs-p: 2rem;
+
+	/* Colors */
+	--green-500: hsl(171, 66%, 44%);
+	--blue-100: hsl(233, 100%, 69%);
+	--gray-700: hsl(210, 10%, 33%);
+	--gray-500: hsl(201, 11%, 66%);
+	--white: hsl(0, 0%, 100%);
+
+	/* Shadow */
+	--btn-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+		rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* =========== Global Styles =========== */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 50%;
+}
+
+body {
+	font-family: var(--font-primary);
+}
+
+h3,
+h2,
+h1 {
+	font-weight: var(--font-bold);
+	color: var(--gray-700);
+	padding-block-end: 2rem;
+}
+
+h1 {
+	font-size: var(--fs-h1);
+}
+
+h2 {
+	font-size: var(--fs-h2);
+}
+
+h3 {
+	font-size: var(--fs-h3);
+}
+
+p {
+	font-weight: var(--font-regular);
+	color: var(--gray-500);
+	font-size: var(--fs-p);
+	line-height: var(--lh-base);
+	padding-block-end: 2rem;
+}
+
+a {
+	text-decoration: none;
+	font-size: var(--fs-p);
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.me-3 {margin-block-end: 3rem;}
+.me-5 {margin-block-end: 5rem;}
+.me-10 {margin-block-end: 10rem;}
+.me-15 {margin-block-end: 15rem;}
+.me-20 {margin-block-end: 20rem;}
+.m-inline-auto {margin-inline: auto;}
+
+.text-center {
+	text-align: center;
+}
+
+.container-small {
+	max-width: 54rem;
+	padding-inline: 3rem;
+}
+
+.container-large {
+	padding-inline: 3rem;
+}
+
+/* =========== Display Flex & Grid =========== */
+
+.d-flex {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.d-grid {
+	display: grid;
+	gap: 3rem;
+}
+
+/* =========== Button =========== */
+
+.btn {
+	background-color: var(--green-500);
+	color: var(--white);
+	padding: 1.5rem 6rem;
+	border-radius: 5rem;
+	box-shadow: var(--btn-shadow);
+	transition: all .3s ease-in-out;
+	width: 100%;
+}
+
+.btn-mac {
+	background-color: var(--blue-100);
+}
+
+.btn:hover {
+	opacity: .7;
+}
+
+/* =========== Header =========== */
+
+.header {
+	background-image: url(../images/background/bg-header-mobile.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-origin: padding-box;
+	background-position: center;
+}
+
+.header .header-logo {
+	width: 12rem;
+	padding-block: 15rem 5rem;
+}
+
+/* =========== Menu =========== */
+
+.main .main-img img{
+	width: 70%;
+	padding-block-end: 5rem;
+}
+
+.main .main-content.d-flex {
+	align-items: center;
+}
+
+/* =========== Workflow =========== */
+
+.section-workflow .card img {
+	width: 6rem;
+}
+
+.section-workflow .d-flex {
+	gap: 3rem;
+}
+
+/* =========== Brand =========== */
+
+.brand .d-flex {
+	gap: 6rem;
+	align-items: center;
+}
+
+/* =========== Footer =========== */
+
+.footer-logo {
+	width: 10rem;
+}
+
+.footer .social .d-flex {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+}
+
+.footer .footer-link a {
+	color: var(--gray-500);
+	transition: color .3s ease;
+}
+
+.footer .footer-link:hover a {
+	color: var(--green-500);
+}
+
+/* =========== Footer Bottom =========== */
+
+.footer-bottom {
+	background-color: var(--gray-700);
+}
+
+.footer-bottom .container-sm {
+	margin-block: 0;
+	padding-block-start: 2rem;
+}
+
+.footer-bottom .attribution {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+.footer-bottom .attribution a {
+	font-size: 1.4rem;
+	color: var(--green-500)
+}
+
+/* =========== Media Query =========== */
+
+/* =========== 375px =========== */
+@media screen and (min-width: 23.438rem) {
+	.btn {
+		width: unset;
+	}
+}
+
+/* =========== 576px =========== */
+@media screen and (min-width: 36rem) {
+	html {
+		font-size: 56.25%;
+	}
+	
+	.header {
+		background-image: url(../images/background/bg-header-desktop.png);
+	}
+
+	.container-small {
+		max-width: 72rem;
+	}
+
+	.btn {
+		padding-inline: 3rem;
+	}
+
+	.section-clipboard .d-flex,
+	.header .d-flex {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+/* =========== 768px =========== */
+@media screen and (min-width: 48rem) {
+	html {
+		font-size: 62.5%;
+	}
+}
+
+/* =========== 992px =========== */
+@media screen and (min-width: 62rem) {
+	/* Container */
+	.container-large {
+		max-width: 120rem;	
+	}
+
+	.section-access .container-large {
+		max-width: 99.2rem;
+	}
+
+	/* Menu */
+	.container-main .main-content {
+		max-width: 144rem;
+	}
+
+	.main .main-content.d-flex {
+		flex-direction: row;
+		gap: 6rem;
+	}
+
+	.main .main-content .main-img {
+		flex-basis: 55%;
+	}
+
+	.main .main-content .main-img img {
+		width: 100%;
+		position: relative;
+		left: -4rem;
+	}
+
+	.main .main-content .main-text.d-flex{
+		flex-direction: column;
+		flex-basis: 40%;
+		text-align: start;
+	}
+
+	/* Workflow & Brand*/
+	.brand .d-flex,
+	.section-workflow .d-flex {
+		flex-direction: row;
+	}
+
+	.brand .d-flex .brand-item,
+	.section-workflow .card {
+		justify-content: space-between;
+		flex: 1;
+	}
+
+	/* Footer */
+	.footer {
+		max-width: 144rem;
+	}
+
+	.footer .d-grid {
+		grid-template-columns: repeat(3, auto);
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.footer .d-grid .footer-links.d-grid {
+		grid-template-columns: repeat(3, auto);
+		grid-template-rows: auto;
+		justify-content: space-between;
+		justify-items: start;
+	}
+}
+
+/* Cihaz ayarlarında animasyonu kapatan kimseler için animasyonları kapatma */
+@media screen and (prefers-reduced-motion: reduce) {
+	* {
+		/* Komple aniamsyon kapatma */
+		animation: none;
+		transition: none;
+
+		/* Animasyonların yavaşlatılması öneriliyor */
+		/* animation-duration: 0.001ms !important;
+		transition-duration: 0.001ms !important; */
+	}
+}
